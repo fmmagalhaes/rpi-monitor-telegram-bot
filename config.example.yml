@@ -1,0 +1,21 @@
+# Example configuration file
+#
+# To use, copy this template and name it `config.yml`
+# cp config.example.yml config.yml
+
+telegram:
+  token: YOUR_BOT_TOKEN
+  chat_id: YOUR_CHAT_ID
+
+thresholds:
+  - value: 60 # 60°C
+    interval: 600 # Alert every 10 minutes
+  - value: 70
+    interval: 300 # 5 minutes
+  - value: 80
+    interval: 60 # 1 minute
+
+severity_levels:
+  low: 60
+  medium: 70
+  high: 80
