@@ -1,9 +1,6 @@
 import asyncio
 import os
 import yaml
-from telegram.ext import ApplicationBuilder, CommandHandler
-from helpers.logger_config import setup_logger
-from temperature_monitor import TemperatureMonitor
 from handlers.start_handler import start_handler
 from handlers.status_handler import status_handler
 from handlers.uptime_handler import uptime_handler
@@ -11,6 +8,9 @@ from handlers.reboot_handler import reboot_handler
 from handlers.shutdown_handler import shutdown_handler
 from handlers.error_handler import error_handler
 from helpers.auth_wrapper import execute_with_authentication
+from helpers.logger_config import setup_logger
+from telegram.ext import ApplicationBuilder, CommandHandler
+from temperature.temperature_monitor import TemperatureMonitor
 
 CURRENT_DIR = os.path.dirname(__file__)
 logger = setup_logger(CURRENT_DIR)
