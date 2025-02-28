@@ -41,3 +41,5 @@ Start a chat with [@BotFather](https://telegram.me/BotFather) and use the `/newb
 - **/uptime**: Check system uptime
 - **/reboot**: Reboot the system
 - **/shutdown**: Shutdown the system
+
+<img src="https://github.com/user-attachments/assets/1b173e1d-13dd-4aeb-a1c2-518aa63ad2c4" height="600">
