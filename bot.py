@@ -41,12 +41,12 @@ def main():
         application = ApplicationBuilder().token(telegram_config['token']).build()
         application.bot_data['config'] = config
 
-        application.add_handler(CommandHandler("start", execute_with_authentication(start_handler)))
-        application.add_handler(CommandHandler("help", execute_with_authentication(start_handler)))
-        application.add_handler(CommandHandler("status", execute_with_authentication(status_handler)))
-        application.add_handler(CommandHandler("uptime", execute_with_authentication(uptime_handler)))
-        application.add_handler(CommandHandler("shutdown", execute_with_authentication(shutdown_handler)))
-        application.add_handler(CommandHandler("reboot", execute_with_authentication(reboot_handler)))
+        application.add_handler(CommandHandler("start", start_handler))
+        application.add_handler(CommandHandler("help", start_handler))
+        application.add_handler(CommandHandler("status", status_handler))
+        application.add_handler(CommandHandler("uptime", uptime_handler))
+        application.add_handler(CommandHandler("shutdown", shutdown_handler))
+        application.add_handler(CommandHandler("reboot", reboot_handler))
         application.add_error_handler(error_handler)
 
         monitor = TemperatureMonitor(telegram_config['chat_id'])

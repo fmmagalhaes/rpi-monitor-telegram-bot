@@ -1,8 +1,10 @@
 from helpers.logger_config import get_logger
+from helpers.auth_wrapper import execute_with_authentication
 
 logger = get_logger()
 
 
+@execute_with_authentication
 async def start_handler(update, context):
     """Send a message when the command /start is issued."""
     try:

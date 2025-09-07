@@ -1,9 +1,11 @@
 from helpers.logger_config import get_logger
 from helpers.system_commands import get_system_status
+from helpers.auth_wrapper import execute_with_authentication
 
 logger = get_logger()
 
 
+@execute_with_authentication
 async def status_handler(update, context):
     logger.info(f"status requested by user {update.effective_user.id}")
 
