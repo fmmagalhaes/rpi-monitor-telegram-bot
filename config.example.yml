@@ -9,13 +9,8 @@ telegram:
 
 thresholds:
   - value: 60 # 60°C
-    interval: 600 # Alert every 10 minutes
+    duration: 600 # Must exceed 60°C for at least 600 seconds before alerting
   - value: 70
-    interval: 300 # 5 minutes
+    duration: 300 # 5 minutes
   - value: 80
-    interval: 60 # 1 minute
-
-severity_levels:
-  low: 60
-  medium: 70
-  high: 80
+    duration: 120 # 2 minutes

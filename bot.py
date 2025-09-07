@@ -59,7 +59,7 @@ def main():
         application.job_queue.run_repeating(
             monitor.check_temperature,
             interval=60,
-            first=30
+            first=10
         )
 
         logger.info("Starting bot...")

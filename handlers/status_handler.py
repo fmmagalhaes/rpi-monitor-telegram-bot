@@ -10,7 +10,7 @@ async def status_handler(update, context):
     status_data = get_system_status()
     if status_data['success']:
         message = (f"📊 System Status\n\n"
-                   f"🔄 CPU Usage: {status_data['cpu_usage']}%\n"
+                   f"⚙️ CPU Usage: {status_data['cpu_usage']}%\n"
                    f"💾 RAM: {status_data['ram_used']}GB of {status_data['ram_total']}GB\n"
                    f"📂 Disk: {status_data['disk_used']}GB of {status_data['disk_total']}GB\n"
                    f"🌡️ Temperature: {status_data['temperature']}")
